@@ -5,6 +5,6 @@ import { Directive, ElementRef } from '@angular/core';
 })
 export class HighDirective {
 
-  constructor(private) { }
+  constructor(private elem:ElementRef) { }
 
 }
