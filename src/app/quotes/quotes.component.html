@@ -2,11 +2,18 @@
     <div *ngIf="quote.upvotes == highest && quote.upvotes>0 ;then highlight else empty">
     </div>
     <ng-template #highlight>
-        <li appHigh>{{ quote.quote}} <span class="">{{ quote.upvotes}}</span><span>{{ quote.downvotes}}</span></li>
+        <li appHigh>{{ quote.quote}} 
+            <span><button type="button" class="btn btn-success m-1">upvotes{{ quote.upvotes}}</button></span>
+            <span><button type="button" class="btn btn-success m-1">downvotes{{ quote.downvotes}}</button></span>
+        </li>
+
     </ng-template>
 
     <ng-template #empty>
-        <li>{{ quote.quote}} <span class="">{{ quote.upvotes}}</span><span>{{ quote.downvotes}}</span></li>
+        <li>{{ quote.quote}}
+            <span><button type="button" class="btn btn-success m-1">upvotes{{ quote.upvotes}}</button></span>
+            <span><button type="button" class="btn btn-success m-1">downvotes{{ quote.downvotes}}</button></span>
+        </li>
     </ng-template>
 
 </ul>
