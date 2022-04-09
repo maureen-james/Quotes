@@ -3,7 +3,9 @@
     </div>
     <ng-template #highlight>
         <li appHigh>{{ quote.quote}} 
-            {{ quote.author}}
+            <div class="author">
+                {{ quote.author}}
+            </div>
             <span><button type="button" class="btn btn-success m-1">upvotes{{ quote.upvotes}}</button></span>
             <span><button type="button" class="btn btn-success m-1">downvotes{{ quote.downvotes}}</button></span>
         </li>
@@ -12,7 +14,9 @@
 
     <ng-template #empty>
         <li>{{ quote.quote}}
-            {{ quote.author}}
+            <div class="author">
+                {{ quote.author}}
+            </div>
             <span><button type="button" class="btn btn-success m-1">upvotes{{ quote.upvotes}}</button></span>
             <span><button type="button" class="btn btn-success m-1">downvotes{{ quote.downvotes}}</button></span>
         </li>
