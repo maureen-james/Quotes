@@ -8,10 +8,12 @@ import { Quote } from '../quote';
 })
 export class QuotesComponent implements OnInit {
   quotes: Quote[]=[
-    new Quote(1, "first quote",0,0),
-    new Quote(1, "second quote",0,0),
-    new Quote(1, "third quote",0,0)
+    new Quote(1,"first quote",0,0),
+    new Quote(2,"second quote",3,0),
+    new Quote(3,"third quote",0,0)
   ]
+  arr:number[]=this.quotes.map(quote=>quote.upvotes)
+  highest = Math.max(...this.arr)
   constructor() { }
 
   ngOnInit(): void {
