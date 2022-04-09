@@ -1,9 +1,8 @@
-<p>quotes-detail works!</p>
 <!-- <--<div class="author">
     {{ quote.author}}
 </div>--
 <span><button type="button" class="btn btn-success m-1">upvotes {{ quote.upvotes}}</button></span>
 <span><button type="button" class="btn btn-success m-1">downvotes {{ quote.downvotes}}</button></span> -->
 <p>{{quote.description}}</p>
-<p>This goal will be complete in {{quote.postdate|dateCount}} days</p>
+<p>This quote will be complete in {{quote.postdate|dateCount}} days</p>
 <button (click)= 'quoteDelete(true)' class="btn btn-outline-danger">Delete Quote</button>

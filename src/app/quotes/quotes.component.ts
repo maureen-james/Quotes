@@ -32,23 +32,23 @@ import { Quote } from '../quote';
 export class QuoteComponent implements OnInit {
 
   quotes: Quote[]=[
-        new Quote(1,"Write it on your heart that every day is the best day in the year.","By: Ralph Waldo Emerson",0,0,"description", new Date(2021, 3, 20)),
-        new Quote(2,"Accentuate the positive, Eliminate the Negative, latch onto the affirmative.","By: Bing Crosby",0,0,"description", new Date(2021, 3, 20)),
-        new Quote(3,"You cannot have a positive life and a negative mind.","By: Joyce Meyer",0,0,"description", new Date(2021, 3, 20)),
-        new Quote(4,"A positive atmosphere nurtures a positive attitude, which is required to take positive action.","By: Richard M. DeVos",0,0,"description", new Date(2021, 3, 20))
+        new Quote(1,"Write it on your heart that every day is the best day in the year.","By: Ralph Waldo Emerson",0,0,"description", "submitted by:Maureen",new Date("2022-04-08")),
+        new Quote(2,"Accentuate the positive, Eliminate the Negative, latch onto the affirmative.","By: Bing Crosby",0,0,"description","submitted by:Maureen", new Date("2022-04-08")),
+        new Quote(3,"You cannot have a positive life and a negative mind.","By: Joyce Meyer",0,0,"description", "submitted by:Maureen",new Date("2022-04-08")),
+        new Quote(4,"A positive atmosphere nurtures a positive attitude, which is required to take positive action.","By: Richard M. DeVos",0,0,"description", "submitted by:Maureen", new Date("2022-04-08"))
    ]
 
       
         toggleDetails(index:number){
           this.quotes[index].showDescription = !this.quotes[index].showDescription;
         }
-        completeQuote(isComplete:any, index:number){
-          if (isComplete) {
+        completeQuote(isVoted:any, index:number){
+          if (isVoted) {
             this.quotes.splice(index,1);
           }
         }
-        deleteQuote(isComplete:any, index:number){
-          if (isComplete) {
+        deleteQuote(isVoted:any, index:number){
+          if (isVoted) {
             let toDelete = confirm(`Are you sure you want to delete ${this.quotes[index].quote}?`)
       
             if (toDelete){
@@ -56,10 +56,10 @@ export class QuoteComponent implements OnInit {
             }
           }
         }
-        addNewQuote(quote: any) {
+        addNewQuote(quote: Quote) {
           let quoteLength = this.quotes.length;
           quote.id = quoteLength + 1;
-          quote.postDate = new Date(quote.postDate)
+          quote.postdate = new Date(quote.postdate)
           this.quotes.push(quote);
         }
 

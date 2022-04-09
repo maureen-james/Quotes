@@ -24,7 +24,7 @@
 
 </ul> -->
 <div class="container">
-    <h2>MY GOALS</h2>
+    <h2>QUOTES</h2>
     <hr>
   
     <div class="row">
@@ -36,14 +36,12 @@
           </div>
   
           <div >
-            <app-quotes-detail *ngIf='quote.showDescription'  [quote]='quote' (isComplete) = 'deleteQuote($event,i)'></app-quotes-detail>
+            <app-quotes-detail *ngIf='quote.showDescription'  [quote]='quote' (isVoted) = 'deleteQuote($event,i)'></app-quotes-detail>
           </div>
         </div>
       </div>
       <div class="col-md-6">
-        <!-- <app-quote-form (addGoal)="addNewGoal($event)"></app-quote-form> -->
+        <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form> 
    </div>
-  
     </div>
-    <!-- <p *ngIf='goals.length > 5'>You have too many goals</p> -->
   </div>
