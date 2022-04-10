@@ -1,6 +1,19 @@
 # Quotes
-
+##### By Maureen Mwangi
+#### Table of Content
+Description
+Installation Requirement
+Technology Used
+Reference
+Licence
+Authors Info
+#### Description
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.0.
+
+##### Technology Used
+Angular CLI
+
+
 
 ## Development server
 
