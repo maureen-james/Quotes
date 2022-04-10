@@ -23,24 +23,30 @@
     </ng-template>
 
 </ul> -->
-<div class="container">
+<div class="container bg-white h-100">
     <h2>QUOTES</h2>
     <hr>
   
     <div class="row">
-      <div class="col-md-6">
+      <div class="col-md-7">
         <div *ngFor='let quote of quotes;let i = index'>
           <div>
             <h6 id={{i}} appHigh>{{quote.quote}} due on {{quote.postdate|date|uppercase}}</h6>
             <button (click)='toggleDetails(i)' class="btn btn-primary">Toggle Details</button>
           </div>
-  
+       
           <div >
             <app-quotes-detail *ngIf='quote.showDescription'  [quote]='quote' (isVoted) = 'deleteQuote($event,i)'></app-quotes-detail>
           </div>
+          <!-- <div >
+             <app-quotes-detail *ngIf='quote.showDescription'  [quote]='quote' (isVoted) = 'upvoteQuote($event,i)'></app-quotes-detail>
+          </div>
+          <div >
+            <app-quotes-detail *ngIf='quote.showDescription'  [quote]='quote' (isVoted) = 'downvoteQuote($event,i)'></app-quotes-detail>
+          </div>  -->
         </div>
       </div>
-      <div class="col-md-6">
+      <div class="col-md-5">
         <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form> 
    </div>
     </div>

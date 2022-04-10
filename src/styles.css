@@ -2,18 +2,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Merienda&display=swap');
 *{
     font-family: 'Merienda', cursive;}
-.container{
+body{
     background-image: url(image/background.jpeg);
-    background-repeat: no-repeat;
+    background-position: center center;
     background-size: cover;
-}
-h1{
-    font-weight: bolder;
-    padding: 20px;
-    text-decoration: underline;
+    background-repeat: no-repeat;
+    background-attachment: fixed
 }
 h2{
     font-style: italic;
-    font-weight: bold;
+    font-weight: bolder;
     padding: 20px;
+    text-decoration: underline;
 }

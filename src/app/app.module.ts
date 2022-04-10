@@ -9,6 +9,7 @@ import { QuoteFormComponent } from './quote-form/quote-form.component';
 import { FormsModule } from '@angular/forms';
 import { DateCountPipe } from './date-count.pipe';
 import { QuoteDetailComponent } from './quotes-detail/quotes-detail.component';
+import { LikeComponent } from './like/like.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { QuoteDetailComponent } from './quotes-detail/quotes-detail.component';
     HighDirective,
     QuoteFormComponent,
     DateCountPipe,
-    QuoteDetailComponent
+    QuoteDetailComponent,
+    LikeComponent
   ],
   imports: [
     BrowserModule,

@@ -56,6 +56,26 @@ export class QuoteComponent implements OnInit {
             }
           }
         }
+        // upvoteQuote(isVoted:any, index:number){
+        //   if (isVoted) {
+        //     let toUpvote = confirm(`Are you sure you want to delete ${this.quotes[index].quote}?`)
+            
+      
+        //     if (toUpvote){
+        //       this.quotes.splice(index,1)
+        //     }
+        //   }
+        // }
+        // downvoteQuote(isVoted:any, index:number){
+        //   if (isVoted) {
+        //     let toDownvote = confirm(`Are you sure you want to delete ${this.quotes[index].quote}?`)
+            
+      
+        //     if (toDownvote){
+        //       this.quotes.splice(index,1)
+        //     }
+        //   }
+        // }
         addNewQuote(quote: Quote) {
           let quoteLength = this.quotes.length;
           quote.id = quoteLength + 1;
