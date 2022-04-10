@@ -1,11 +1,14 @@
-<div class="container bg-white h-100">
-  <h2 class="text-center"> QUOTES</h2>
+<div class="container-fluid h-100">
+  <h2 class="text-center text-white"> MY QUOTES</h2>
+  <p class="text-center text-white">Whenever you're feeling like giving up,visiting my quotes website gives you motivation and uplifts your spirit. You can read the quote upvote or downvote the quote according to how it made you feel. Incase you want to add new quotes you can fill in the form provided</p>
     <hr>
   
     <div class="row">
       <div class="col-md-7">
-      
+
         <div *ngFor='let quote of quotes;let i = index'>
+          <div class="card">
+            <div class="card-body mt-10">
           <div>
             <h6 id={{i}} appHigh>{{quote.quote}} <br> created on {{quote.postdate|date|uppercase}}</h6>
             <button (click)='toggleDetails(i)' class="btn btn-primary">more info</button>
@@ -16,6 +19,8 @@
           </div>
         </div>
       </div>
+    </div>
+  </div>
       <div class="col-md-5">
         <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form> 
    </div>
