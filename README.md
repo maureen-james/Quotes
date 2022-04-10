@@ -2,14 +2,13 @@
 ##### By Maureen Mwangi
 #### Table of Content
 + [Description](#description)
-+ [Installation Requirement](#Installation)
 + [Technology Used](#technology-used)
 + [Licence](#licence)
 #### Description
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.0.Users can create a new quote.They can Upvote or downvote a quote.They can delete a quoteThey can see the number of upvotes and number of downvotes for each quote.
 
 ##### Technology Used
-Angular CLI
+ * Angular CLI
 
 
 
