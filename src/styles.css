@@ -15,3 +15,14 @@ h2{
     padding: 20px;
     text-decoration: underline;
 }
+marquee{
+    color: blanchedalmond;
+    font-size: 280%;
+}
+.container{
+    font-size: 150%;
+}
+h6{
+    font-size: 80%;
+    color: indigo ;
+}

@@ -1,49 +1,19 @@
-<!-- <ul *ngFor ='let quote of quotes'>
-    <div *ngIf="quote.upvotes == highest && quote.upvotes>0 ;then highlight else empty">
-    </div>
-    <ng-template #highlight>
-        <li appHigh>{{ quote.quote}} 
-            <div class="author">
-                {{ quote.author}}
-            </div>
-            <span><button type="button" class="btn btn-success m-1">upvotes {{ quote.upvotes}}</button></span>
-            <span><button type="button" class="btn btn-success m-1">downvotes {{ quote.downvotes}}</button></span>
-        </li> -->
-
-    <!-- </ng-template>
-
-    <ng-template #empty>
-        <li>{{ quote.quote}}
-            <div class="author">
-                {{ quote.author}}
-            </div>
-            <span><button (click)="quoteUpVote" type="button" class="btn btn-success m-1">upvotes {{ quote.upvotes}}</button></span>
-            <span><button type="button" class="btn btn-success m-1">downvotes {{ quote.downvotes}}</button></span>
-        </li>
-    </ng-template>
-
-</ul> -->
 <div class="container bg-white h-100">
-    <h2>QUOTES</h2>
+  <h2 class="text-center"> QUOTES</h2>
     <hr>
   
     <div class="row">
       <div class="col-md-7">
+      
         <div *ngFor='let quote of quotes;let i = index'>
           <div>
-            <h6 id={{i}} appHigh>{{quote.quote}} due on {{quote.postdate|date|uppercase}}</h6>
-            <button (click)='toggleDetails(i)' class="btn btn-primary">Toggle Details</button>
+            <h6 id={{i}} appHigh>{{quote.quote}} <br> created on {{quote.postdate|date|uppercase}}</h6>
+            <button (click)='toggleDetails(i)' class="btn btn-primary">more info</button>
           </div>
        
           <div >
             <app-quotes-detail *ngIf='quote.showDescription'  [quote]='quote' (isVoted) = 'deleteQuote($event,i)'></app-quotes-detail>
           </div>
-          <!-- <div >
-             <app-quotes-detail *ngIf='quote.showDescription'  [quote]='quote' (isVoted) = 'upvoteQuote($event,i)'></app-quotes-detail>
-          </div>
-          <div >
-            <app-quotes-detail *ngIf='quote.showDescription'  [quote]='quote' (isVoted) = 'downvoteQuote($event,i)'></app-quotes-detail>
-          </div>  -->
         </div>
       </div>
       <div class="col-md-5">

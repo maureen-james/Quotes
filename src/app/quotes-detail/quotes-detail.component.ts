@@ -42,12 +42,6 @@ export class QuoteDetailComponent implements OnInit {
   quoteDelete(complete:boolean){
     this.isVoted.emit(complete);
   }
-  // quoteUpvote(complete:Number){
-  //   this.isVoted.emit(complete);
-  // }
-  // quoteDownvote(complete:Number){
-  //   this.isVoted.emit(complete);
-  // }
 
   constructor() { }
 
