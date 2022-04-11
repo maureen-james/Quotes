@@ -9,15 +9,15 @@ import { Quote } from '../quote';
 export class QuoteComponent implements OnInit {
 
   quotes: Quote[]=[
-        new Quote(1,"Write it on your heart that every day is the best day in the year.","By: Ralph Waldo Emerson",0,0,"description", "submitted by:Maureen",new Date("2022-04-08")),
-        new Quote(2,"Accentuate the positive, Eliminate the Negative, latch onto the affirmative.","By: Bing Crosby",0,0,"description","submitted by:Maureen", new Date("2022-04-08")),
-        new Quote(3,"You cannot have a positive life and a negative mind.","By: Joyce Meyer",0,0,"description", "submitted by:Maureen",new Date("2022-04-08")),
-        new Quote(4,"A positive atmosphere nurtures a positive attitude, which is required to take positive action.","By: Richard M. DeVos",0,0,"description", "submitted by:Maureen", new Date("2022-04-08"))
+        new Quote(1,"Write it on your heart that every day is the best day in the year.","By: Ralph Waldo Emerson",0,0,"description", "submitted by:Maureen",  new Date("2022-04-08")),
+        new Quote(2,"Accentuate the positive, Eliminate the Negative, latch onto the affirmative.","By: Bing Crosby",0,0,"description","submitted by:Maureen",  new Date("2022-04-08")),
+        new Quote(3,"You cannot have a positive life and a negative mind.","By: Joyce Meyer",0,0,"description", "submitted by:Maureen",  new Date("2022-04-08")),
+        new Quote(4,"A positive atmosphere nurtures a positive attitude, which is required to take positive action.","By: Richard M. DeVos",0,0,"description", "submitted by:Maureen",  new Date("2022-04-08"))
    ]
 
       
-        arr:number[]=this.quotes.map(quote=>quote.like)
-          highest = Math.max(...this.arr)
+        // arr:number[]=this.quotes.map(quote=>quote.like)
+        //   highest = Math.max(...this.arr)
 
         toggleDetails(index:number){
           this.quotes[index].showDescription = !this.quotes[index].showDescription;
@@ -43,6 +43,36 @@ export class QuoteComponent implements OnInit {
           quote.postdate = new Date(quote.postdate)
           this.quotes.push(quote);
         }
+        preNum!:number
+        lastNum!:number
+        counter!:number
+ 
+  arry: number[] = this.quotes.map(function(quote){
+    return quote.like
+  });
+  
+  numberOfLikes : number = 0;
+  numberOfDislikes : number = 0;
+  
+  
+  likeButtonClick(index:number) {
+    this.numberOfLikes++;
+  }
+
+  dislikeButtonClick(index:number) {
+    this.numberOfDislikes--;
+  }
+
+  highestlikes (){
+    this.preNum = 0
+    this.lastNum = 0
+
+    for(this.counter=0 ; this.counter < this.quotes.length; this.counter++) {
+      this.lastNum = this.quotes[this.counter].like;
+      if(this.lastNum > this.preNum){this.preNum = this.lastNum}
+    }
+    return  this.preNum
+  }
 
   constructor() { }
 

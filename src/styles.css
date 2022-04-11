@@ -14,7 +14,7 @@ h2{
     font-weight: bolder;
     padding: 50px;
     text-decoration: underline;
-    font-size: 150%;
+    font-size: 50px;
 }
 .strong{
     font-style: italic;
@@ -23,11 +23,12 @@ marquee{
     color: blanchedalmond;
     font-size: 280%;
 }
-.container-fluid{
-    font-size: 150%;
+.col-md-7{
+    font-size: 25px;
 }
 p {
     color: black;
+    font-size: 35px;
 }
 h6{
     font-size: 80%;
@@ -40,5 +41,6 @@ h6{
 }
 .col-md-5{
    margin-top: 20px; 
+   font-size: 35px;
 }
 

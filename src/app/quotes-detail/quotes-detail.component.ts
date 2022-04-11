@@ -42,6 +42,22 @@ export class QuoteDetailComponent implements OnInit {
   quoteDelete(complete:boolean){
     this.isVoted.emit(complete);
   }
+  quoteLike(quoteLike:boolean){
+    this.isVoted.emit(quoteLike);
+  }
+
+  quoteDisLike(quoteDisLike:boolean){
+    this.isVoted.emit(quoteDisLike);
+  }
+
+  like(){
+    this.quote.like+=1;
+  }
+
+  disLike () {
+    this.quote.dislike+=1;
+  }
+  
 
   constructor() { }
 

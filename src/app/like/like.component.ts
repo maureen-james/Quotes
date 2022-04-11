@@ -10,11 +10,11 @@ export class LikeComponent  {
   numberOfDislikes : number = 0;
   
   
-  likeButtonClick() {
+  likeButtonClick(index:number) {
     this.numberOfLikes++;
   }
 
-  dislikeButtonClick() {
+  dislikeButtonClick(index:number) {
     this.numberOfDislikes--;
   }
 }

@@ -1,6 +1,15 @@
-<p>This quote was completed in {{quote.postdate|dateCount}} day(s)</p>
+<!-- <p>This quote was completed in {{quote.postdate|dateCount}} day(s)</p>
 <p>This quote was posted by {{quote.author}} </p>
-<button (click)= 'quoteDelete(true)' class="btn btn-outline-danger">Delete This Quote</button>
-<like-box></like-box>
+<button (click)= 'quoteDelete(true)' class="btn btn-outline-danger">Delete This Quote</button> -->
+<!-- <like-box></like-box> -->
+
+<div class="quote">
+    <small>This quote was written by {{quote.author}} <br>{{quote.submitted_by}} &nbsp;&nbsp; <br> on
+      {{quote.postdate|dateCount}} day(s) ago)</small><br>
+    <button class="btn btn-danger" (click)='quoteDelete(true)'>Delete</button>&nbsp;&nbsp;
+    <button class="btn btn-success" (click)="like()" appHighlightVote>{{quote.like}}&nbsp;&nbsp;Upvotes</button>&nbsp;&nbsp;
+    <button class="btn btn-primary" (click)="disLike()" appHighlightVote>{{quote.dislike}}&nbsp;&nbsp;Downvotes</button>&nbsp;&nbsp;
+    
+      </div> 
 
 
