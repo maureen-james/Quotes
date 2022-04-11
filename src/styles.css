@@ -14,7 +14,7 @@ h2{
     font-weight: bolder;
     padding: 50px;
     text-decoration: underline;
-    font-size: 50px;
+    font-size: 30px;
 }
 .strong{
     font-style: italic;
@@ -24,11 +24,11 @@ marquee{
     font-size: 280%;
 }
 .col-md-7{
-    font-size: 25px;
+    font-size: 15px;
 }
 p {
     color: black;
-    font-size: 35px;
+    font-size: 20px;
 }
 h6{
     font-size: 80%;
@@ -41,6 +41,6 @@ h6{
 }
 .col-md-5{
    margin-top: 20px; 
-   font-size: 35px;
+   font-size: 15px;
 }
 
